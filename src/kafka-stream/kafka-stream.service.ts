@@ -31,7 +31,6 @@ export class KafkaStreamService implements OnModuleInit, OnApplicationShutdown {
       },
     });
 
-    // Manejo de errores correctamente ajustado
     this.consumer.on('consumer.crash', (error) => {
       console.error('Consumer has crashed:', error);
     });
